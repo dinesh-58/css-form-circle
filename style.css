@@ -1,0 +1,40 @@
+:root {
+    --radius: 0px;
+    --cx: 0px;
+    --cy: 0px;
+    font-size: 30px;
+}
+img {
+    cursor: pointer;
+}
+
+body {
+    /* for sticky to work */
+    position: relative; 
+    background-color: gray;
+}
+#circle {
+    /* center & radius  */
+    position: absolute;
+    /* padding: var(--radius); */
+    /* left: calc(var(--cx) - var(--radius));
+    top:  calc(var(--cy) - var(--radius)); */
+    left: var(--cx);
+    top: var(--cy);
+
+    background-color: red;
+    border-radius: 50%;
+}
+
+.animated {
+    height: 1px;
+    width: 1px;
+    transform: scale(var(--radius));
+    transition: transform 3s; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
